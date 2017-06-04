@@ -23,7 +23,7 @@ $(function initializeSliders(){
 	
 		$('.slider-icon').click(function(){
 			if( !$(this).hasClass('active') ) return;
-			var new_position, sliding_right=false, slider = $(this).closest('.slider'), track = $(slider).find('.track'), current_position = parseInt( (track.css('transform').split(',')[4] / $(document).width()) / -1);
+			var new_position, sliding_right=false, slider = $(this).closest('.slider'), track = $(slider).find('.track'), current_position = parseInt( (track.css('transform').split(',')[4] / $(slider).width()) / -1);
 			if( $(this).hasClass('right') ) sliding_right = true;
 			if( !Number.isInteger(current_position) ) current_position = 0;
 			if(current_position > 0) {
@@ -33,7 +33,7 @@ $(function initializeSliders(){
 		});
 		circles.children().each(function(){
 			$(this).click(function(){
-				var sliding_right = false, slider = $(this).closest('.slider'), track = $(slider).find('.track'), current_position = parseInt( (track.css('transform').split(',')[4] / $(document).width()) / -1), new_position = $(this).index();
+				var sliding_right = false, slider = $(this).closest('.slider'), track = $(slider).find('.track'), current_position = parseInt( (track.css('transform').split(',')[4] / $(slider).width()) / -1), new_position = $(this).index();
 				if( !Number.isInteger(current_position) ) current_position = 0;
 				if (new_position > current_position) sliding_right = true;
 				changeBanner(slider,new_position,sliding_right);
