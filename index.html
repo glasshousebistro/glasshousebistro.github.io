@@ -32,10 +32,10 @@
 			<div class="navigation">
 				<ul>
 					<li class="black"><a href="#"><strong>Glass</strong>house</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
-					<li><a href="#">Menu</a></li>
-					<li><a href="#">News</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a href="#menu">Menu</a></li>
+					<li><a href="#news">News</a></li>
 					<li><a href="#">Find Us</a></li>
 				</ul>
 			</div>
@@ -50,15 +50,16 @@
 
 			<!-- Book Table -->
 			<div class="hero-cta">
-				<button class="alt">Book A Table</button>
+				<a href="#contact"><button class="alt">Book A Table</button></a>
 				<p><i class="fa fa-long-arrow-down" aria-hidden="true"></i></p>
 			</div>
 
 		</div>
 
 		<!-- Who We Are -->
-		<div class="section about">
+		<div class="section padded">
 			<div class="container">
+				<a name="about"></a>
 				<div class="black"><h1><strong>Who</strong> We <strong>Are</strong></h1></div>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed vehicula quam. Maecenas aliquam ipsum urna, eu lacinia nulla condimentum ac. Aenean vitae accumsan lacus. Praesent venenatis purus at ex aliquam, a tempor quam efficitur. Maecenas ac nunc eleifend, scelerisque nunc in, pellentesque dui. Vivamus ultricies dui ut augue accumsan, et pretium erat venenatis. Suspendisse potenti.
@@ -80,19 +81,20 @@
 		</div>
 
 		<!-- Contact Form -->
-		<div class="section padded">
+		<div class="section padded contact" id="contact-form">
 			<div class="flex container">
+				<a name="contact"></a>
 				<form class="contact">
 					<div class="black"><h3><strong>Enquiries</strong></h3></div>
-					<input type="text" name="name">
-					<input type="text" name="email">
-					<textarea name="enquiry"></textarea>
-					<input type="submit" value="Submit">
+					<input type="text" placeholder="Name" name="name">
+					<input type="text" placeholder="Email" name="email">
+					<textarea name="enquiry" placeholder="What's your enquiry?"></textarea>
+					<input type="submit" value="Submit" class="button">
 				</form>
 				<div class="sidebar">
 					<div>
 						<div class="black"><h3><strong>Book</strong> A <strong>Table</strong></h3></div>
-						<h6>Get In Touch</h6>
+						<h4>Get In Touch</h4>
 						<p>Tel: 01253 829608</p>
 						<p>Email: booking@glasshouse.com.uk</p>
 					</div>
@@ -116,33 +118,57 @@
 		<!-- Menu -->
 		<div class="section padded menu">
 			<div class="container">
+				<a name="menu"></a>
 				<div class="black"><h3><strong>Our</strong> Menus</h3></div>
-				<span><a href="#">Tapas</a></span>
-				<span><a href="#">Cocktails</a></span>
-				<span><a href="#">Drinks</a></span>
+				<div class="menu-links">
+					<span><a href="#">Tapas</a></span>
+					<span><a href="#">Cocktails</a></span>
+					<span><a href="#">Drinks</a></span>
+				</div>
 				<p>
 					food served between 12.30 - 21.00 Monday - Saturday &amp; 12.00 - 18.00 Sunday
 				</p>
 			</div>
 		</div>
 
-		<!-- What's On -->
+		<!-- News -->
 		<div class="section flex news">
 			<div>
-				<div>What's On</div>
-				<div>
-					<p>
-						Friday
-						18.00 - 21.00
-						2-4-1 Cocktails
-
-						21.00 - 22.00
-						Live Music
-					</p>
+				<a name="news"></a>
+				<div class="black"><h2><strong>What's</strong> On?</h2></div>
+				<div class="slider">
+					<div class="flex track">
+						<div class="slide">
+							<hr />
+							<h2>Friday</h2>
+							<p>
+								18.00 - 21.00 <br />
+								2-4-1 Cocktails
+							</p>
+							<p>
+								21.00 - 22.00<br />
+								Live Music
+							</p>
+							<hr />
+						</div>
+						<div class="slide">
+							<hr />
+							<h2>Saturday</h2>
+							<p>
+								12.00 - 20.00 <br />
+								Example Slide
+							</p>
+							<p>
+								20.00 - 23.00<br />
+								Happy Hour
+							</p>
+							<hr />
+						</div>
+					</div>
 				</div>
 			</div>
 			<div>
-				
+				<div class="slide" style="background-image: url(img/hero.jpg)"></div>
 			</div>
 		</div>
 
@@ -157,25 +183,26 @@
 
 		<!-- Footer -->
 		<div class="section padded flex footer">
-			<div class="address">
+			<div>
 				<div class="black"><h3><strong>Find</strong> Us</h3></div>
 				<address>
-					6 Bispham Road
-					Cleveleys
-					FY5 1DG
+					6 Bispham Road<br />
+					Cleveleys<br />
+					FY5 1DG<br />
 				</address>
 			</div>
-			<div class="links">
-				<a><h4>Contact</h4></a>
-				<a><h4>Work With Us</h4></a>
+			<div class="social-links">
+				<a href="#contact"><h3>Contact</h3></a>
+				<a href="careers.html"><h3>Work With Us</h3></a>
 				<p>Follow Us:</p>
 				<a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
 				<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 				<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 			</div>
 			<div class="subscribe">
-				<h5>E-Mail</h5>
-				<hr />
+				<form>
+					<input type="text" name="E-Mail" placeholder="EMAIL">
+				</form>
 				<p>
 					Sign up to our newsletter to keep up to date with our latest offers and events. 
 				</p>
