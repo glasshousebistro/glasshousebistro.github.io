@@ -82,17 +82,16 @@
 					<div class="black"><h3><strong>Enquiries</strong></h3></div>
 					<form name="contact" id="contact-form" action="">
 
-						<input type="text" placeholder="Name" name="name" id="contact-name" />
-						<label class="error" for="name" id="error_name">This field is required or invalid.</label>
+						<input type="text" placeholder="Name" name="name" id="contact-name" maxlength="32" required />
+						<label class="error" for="name" id="error_name">Please enter a valid name.</label>
 
-						<input type="email" placeholder="Email" name="email" id="contact-email" />
-						<label class="error" for="email" id="error_email">This field is required or invalid.</label>
+						<input type="email" placeholder="Email" name="email" id="contact-email" maxlength="255" required />
+						<label class="error" for="email" id="error_email">Please enter a valid e-mail address.</label>
 
-						<textarea placeholder="What's your enquiry?" name="enquiry" id="contact-enquiry"></textarea>
-						<label class="error" for="enquiry" id="error_enquiry">This field is required or invalid.</label>
+						<textarea placeholder="What's your enquiry?" name="enquiry" id="contact-enquiry" maxlength="2000" required></textarea>
+						<label class="error" for="enquiry" id="error_enquiry">Please enter a valid enquiry. Enquiries must be shorter than 2000 characters.</label>
 
 						<input type="hidden" name="_subject" value="Glasshouse Website Enquiry" id="contact-subject" />
-						<input type="hidden" name="_next" value="//glasshousebistro.github.io" id="contact-next" />
 
 						<button id="contact-submit">Send</button>
 

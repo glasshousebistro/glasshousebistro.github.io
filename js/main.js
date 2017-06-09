@@ -56,7 +56,7 @@ $(function initializeNavigation(){
 	});
 });
 
-
+// Contact Form
 $(function() {
 	$('.error').hide();
     $('#contact-submit').click(function() {
@@ -64,38 +64,42 @@ $(function() {
 		$('.error').hide();
 
 		var name = $("#contact-name").val();
-		if (name == "") {
+		if (name == "" || name.length > 32) {
 			$("label#error_name").show();
 			$("#contact-name").focus();
 			return false;
 		}
 
 		var email = $("#contact-email").val();
-		if (email == "") {
+		var email_exp = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,8}$/i;
+		if (email == "" || email.length > 255 || !email_exp.test(email)) {
 			$("label#error_email").show();
 			$("#contact-email").focus();
 			return false;
 		}
 
 		var enquiry = $("#contact-enquiry").val();
-		if (enquiry == "") {
+		if (enquiry == "" || name.length > 2000) {
 			$("label#error_enquiry").show();
 			$("#contact-enquiry").focus();
 			return false;
 		}
 
+		var subject = $("#contact-subject").val();
+		if (subject == "") {return false;}
+
 		$.ajax({
-		    url: "https://formspree.io/waseem786@gmail.com", 
+		    url: "https://formspree.io/hannah@glasshousebistro.uk.com", 
 		    method: "POST",
-            data: { name: name, 
-                    email: email,
-                    enquiry: enquiry },
+            data: { 'name': name, 
+                    'email': email,
+                    'enquiry': enquiry,
+                    '_subject': subject },
 		    dataType: "json",
 		    success: function(){
 		    	$('#contact-wrapper').html("<p>Your form was submitted successfully.</p>");
 		    }
 		});
-
 		return false;
     }); 
 });
