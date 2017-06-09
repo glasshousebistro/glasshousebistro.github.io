@@ -56,24 +56,46 @@ $(function initializeNavigation(){
 	});
 });
 
-/*
+
 $(function() {
-    $('#contact-form').submit(function() {
-    	console.log("Submitting!");
-        $.ajax({
-            type: 'POST',
-            url: 'email.php',
-            data: { name: $(this).name.value, 
-                    email: $(this).email.value,
-                    enquiry: $(this).enquiry.value },
-            success: function(response){  
-                alert("Success! " + response);
-            },
-            error: function(response) { 
-            	alert("Error: " + response); 
-            }
-        });
-        return false;
+	$('.error').hide();
+    $('#contact-submit').click(function() {
+
+		$('.error').hide();
+
+		var name = $("#contact-name").val();
+		if (name == "") {
+			$("label#error_name").show();
+			$("#contact-name").focus();
+			return false;
+		}
+
+		var email = $("#contact-email").val();
+		if (email == "") {
+			$("label#error_email").show();
+			$("#contact-email").focus();
+			return false;
+		}
+
+		var enquiry = $("#contact-enquiry").val();
+		if (enquiry == "") {
+			$("label#error_enquiry").show();
+			$("#contact-enquiry").focus();
+			return false;
+		}
+
+		$.ajax({
+		    url: "https://formspree.io/waseem786@gmail.com", 
+		    method: "POST",
+            data: { name: name, 
+                    email: email,
+                    enquiry: enquiry },
+		    dataType: "json",
+		    success: function(){
+		    	$('#contact-wrapper').html("<p>Your form was submitted successfully.</p>");
+		    }
+		});
+
+		return false;
     }); 
-})
-*/
+});

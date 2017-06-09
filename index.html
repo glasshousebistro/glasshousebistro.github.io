@@ -77,13 +77,28 @@
 		<!-- Contact Form -->
 		<div class="section padded contact" id="contact">
 			<div class="flex container">
-				<form class="contact" id="contact-form" method="POST" action="https://formspree.io/waseem786@gmail.com">
+
+				<div id="contact-wrapper">
 					<div class="black"><h3><strong>Enquiries</strong></h3></div>
-					<input type="text" placeholder="Name" name="name">
-					<input type="email" placeholder="Email" name="email">
-					<textarea placeholder="What's your enquiry?" name="enquiry"></textarea>
-					<input type="submit" value="Send" class="button">
-				</form>
+					<form name="contact" id="contact-form" action="">
+
+						<input type="text" placeholder="Name" name="name" id="contact-name" />
+						<label class="error" for="name" id="error_name">This field is required or invalid.</label>
+
+						<input type="email" placeholder="Email" name="email" id="contact-email" />
+						<label class="error" for="email" id="error_email">This field is required or invalid.</label>
+
+						<textarea placeholder="What's your enquiry?" name="enquiry" id="contact-enquiry"></textarea>
+						<label class="error" for="enquiry" id="error_enquiry">This field is required or invalid.</label>
+
+						<input type="hidden" name="_subject" value="Glasshouse Website Enquiry" id="contact-subject" />
+						<input type="hidden" name="_next" value="//glasshousebistro.github.io" id="contact-next" />
+
+						<button id="contact-submit">Send</button>
+
+					</form>
+				</div>
+
 				<div class="sidebar">
 					<div>
 						<div class="black"><h3><strong>Book</strong> A <strong>Table</strong></h3></div>
