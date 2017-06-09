@@ -41,3 +41,17 @@ $(function initializeSliders(){
 		});
 	});
 });
+
+function scrollTo(element){
+	var offset = $(element).offset().top;
+	$("html, body").animate({
+		scrollTop: offset + "px"
+	});
+}
+$(function initializeNavigation(){
+	$('.scroll').click(function(e){
+		e.preventDefault();
+		var element = $(this).attr('href');
+		scrollTo(element);
+	});
+});
