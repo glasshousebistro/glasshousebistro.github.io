@@ -369,7 +369,6 @@
 		.news > .flex{flex-wrap:wrap;}
 		.news > .flex > div{
 			flex-basis:100%;
-			height:50%;
 		}
 
 		.news .black{
