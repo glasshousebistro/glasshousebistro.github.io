@@ -305,15 +305,15 @@
 				-ms-flex-align: start;
 					align-items: flex-start;
 		}
-		.contact iframe{
+
+		form.contact{
 			flex-basis:70%;
 			padding-right:5%;
 			margin-right:5%;
 			border:0;
 			height:400px;
+			text-align:left;
 		}
-
-		form.contact{text-align:left;}
 		form.contact .black{margin-left:0;}
 		form.contact input, form.contact textarea{
 			border:2px solid black;

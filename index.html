@@ -77,7 +77,13 @@
 		<!-- Contact Form -->
 		<div class="section padded contact" id="contact">
 			<div class="flex container">
-				<iframe src="contact.html" frameborder="0"></iframe>
+				<form class="contact" id="contact-form" method="POST" action="email.php">
+					<div class="black"><h3><strong>Enquiries</strong></h3></div>
+					<input type="text" placeholder="Name" name="name">
+					<input type="email" placeholder="Email" name="email">
+					<textarea placeholder="What's your enquiry?" name="enquiry"></textarea>
+					<input type="submit" value="Send" class="button">
+				</form>
 				<div class="sidebar">
 					<div>
 						<div class="black"><h3><strong>Book</strong> A <strong>Table</strong></h3></div>

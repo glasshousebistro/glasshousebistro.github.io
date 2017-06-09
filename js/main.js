@@ -55,3 +55,25 @@ $(function initializeNavigation(){
 		scrollTo(element);
 	});
 });
+
+/*
+$(function() {
+    $('#contact-form').submit(function() {
+    	console.log("Submitting!");
+        $.ajax({
+            type: 'POST',
+            url: 'email.php',
+            data: { name: $(this).name.value, 
+                    email: $(this).email.value,
+                    enquiry: $(this).enquiry.value },
+            success: function(response){  
+                alert("Success! " + response);
+            },
+            error: function(response) { 
+            	alert("Error: " + response); 
+            }
+        });
+        return false;
+    }); 
+})
+*/
