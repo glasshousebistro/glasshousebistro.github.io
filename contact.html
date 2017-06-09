@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<script type="text/javascript">
+		window.onload = function() {
+		    if (parent) {
+		        var oHead = document.getElementsByTagName("head")[0];
+		        var arrStyleSheets = parent.document.getElementsByTagName("style");
+		        for (var i = 0; i < arrStyleSheets.length; i++)
+		            oHead.appendChild(arrStyleSheets[i].cloneNode(true));
+		    }
+		}
+		</script>
+	</head>
+
+	<body>
+		<form class="contact" action="https://formspree.io/waseem786@gmail.com" method="POST">
+			<div class="black"><h3><strong>Enquiries</strong></h3></div>
+			<input type="text" placeholder="Name" name="name">
+			<input type="email" placeholder="Email" name="email">
+			<textarea name="enquiry" placeholder="What's your enquiry?"></textarea>
+			<input type="submit" value="Send" class="button">
+		</form>
+	</body>
+</html>
