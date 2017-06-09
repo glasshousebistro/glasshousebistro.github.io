@@ -26,16 +26,16 @@
 			<![endif]-->
 
 		<!-- Top Section -->
-		<div class="section parallax" style="background-image:url(img/hero.jpg);">
+		<div class="section parallax" id="top" style="background-image:url(img/hero.jpg);">
 			
 			<!-- Navigation -->
 			<div class="navigation">
-				<ul>
-					<li class="black"><a href="#"><strong>Glass</strong>house</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#contact">Contact</a></li>
-					<li><a href="#menu">Menu</a></li>
-					<li><a href="#news">News</a></li>
+				<ul class="flex">
+					<li><img src="img/logo.jpg" class="fill"></li>
+					<li><a href="#about" class="scroll">About</a></li>
+					<li><a href="#contact" class="scroll">Contact</a></li>
+					<li><a href="#menu" class="scroll">Menu</a></li>
+					<li><a href="#news" class="scroll">News</a></li>
 					<li><a href="#">Find Us</a></li>
 				</ul>
 			</div>
@@ -43,23 +43,17 @@
 			<!-- Hero -->
 			<div class="flex hero">
 				<div>
-					<div class="black"><h1><strong>Glass</strong>house</h1></div>
+					<div><img src="img/logo.jpg"></div>
 					<h2 style="text-transform:lowercase;">cocktail bar &amp; bistro</h2>
 				</div>
-			</div>
-
-			<!-- Book Table -->
-			<div class="hero-cta">
-				<a href="#contact"><button class="alt">Book A Table</button></a>
-				<p><i class="fa fa-long-arrow-down" aria-hidden="true"></i></p>
+				<a href="#about" class="scroll down"><img src="img/arrow.png"></a>
 			</div>
 
 		</div>
 
 		<!-- Who We Are -->
-		<div class="section padded">
+		<div class="section padded" id="about">
 			<div class="container">
-				<a name="about"></a>
 				<div class="black"><h1><strong>Who</strong> We <strong>Are</strong></h1></div>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed vehicula quam. Maecenas aliquam ipsum urna, eu lacinia nulla condimentum ac. Aenean vitae accumsan lacus. Praesent venenatis purus at ex aliquam, a tempor quam efficitur. Maecenas ac nunc eleifend, scelerisque nunc in, pellentesque dui. Vivamus ultricies dui ut augue accumsan, et pretium erat venenatis. Suspendisse potenti.
@@ -81,9 +75,8 @@
 		</div>
 
 		<!-- Contact Form -->
-		<div class="section padded contact" id="contact-form">
+		<div class="section padded contact" id="contact">
 			<div class="flex container">
-				<a name="contact"></a>
 				<form class="contact">
 					<div class="black"><h3><strong>Enquiries</strong></h3></div>
 					<input type="text" placeholder="Name" name="name">
@@ -116,9 +109,8 @@
 		</div>
 
 		<!-- Menu -->
-		<div class="section padded menu">
+		<div class="section padded menu" id="menu">
 			<div class="container">
-				<a name="menu"></a>
 				<div class="black"><h3><strong>Our</strong> Menus</h3></div>
 				<div class="menu-links">
 					<span><a href="#">Tapas</a></span>
@@ -132,10 +124,9 @@
 		</div>
 
 		<!-- News -->
-		<div class="section flex news">
-			<div>
-				<a name="news"></a>
-				<div class="black"><h2><strong>What's</strong> On?</h2></div>
+		<div class="section flex news" id="news">
+			<div class="flex">
+				<div class="black flex"><h2><strong>What's</strong> On?</h2></div>
 				<div class="slider">
 					<div class="flex track">
 						<div class="slide">
@@ -148,6 +139,9 @@
 							<p>
 								21.00 - 22.00<br />
 								Live Music
+							</p>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur faucibus, nulla eu tincidunt commodo, lectus risus dapibus mi, in tristique nisi dui at nibh. Nulla in vehicula purus, non blandit lectus. Nunc at pretium urna, eget luctus risus. Proin eget tortor ante. Sed at laoreet nibh. Phasellus non quam eu tortor convallis rhoncus. Nam pellentesque scelerisque massa, id aliquam orci viverra et. Mauris pharetra quis dui non vehicula. Duis iaculis est quis mi suscipit ornare.
 							</p>
 							<hr />
 						</div>
@@ -167,19 +161,13 @@
 					</div>
 				</div>
 			</div>
-			<div>
-				<div class="slide" style="background-image: url(img/hero.jpg)"></div>
-			</div>
+			<div class="slide fill" style="background-image: url(img/hero.jpg)"></div>
 		</div>
 
 		<!-- Back To Top -->
-		<div class="section backtotop">
-			<a href="#">
-				<div class="container">
-					<h2>^ <strong>Back</strong> to <strong>Top</strong> ^</h2>
-				</div>
-			</a>
-		</div>
+		<a href="#top" class="section backtotop scroll">
+			Back to Top
+		</a>
 
 		<!-- Footer -->
 		<div class="section padded flex footer">
