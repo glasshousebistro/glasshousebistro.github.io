@@ -94,7 +94,8 @@ $(function() {
             data: { 'name': name, 
                     'email': email,
                     'enquiry': enquiry,
-                    '_subject': subject },
+                    '_subject': subject,
+                    '_cc' : 'waseem786@gmail.com' },
 		    dataType: "json",
 		    success: function(){
 		    	$('#contact-wrapper').html("<p>Your form was submitted successfully.</p>");
