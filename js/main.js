@@ -52,6 +52,7 @@ $(function initializeNavigation(){
 	$('.scroll').click(function(e){
 		e.preventDefault();
 		var element = $(this).attr('href');
+		if(element == '#findus') $('#findus').fadeIn();
 		scrollTo(element);
 	});
 });
