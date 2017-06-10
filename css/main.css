@@ -86,7 +86,7 @@
 		.section.padded{padding:4% 0;}
 		.container{
 			margin:0 auto;
-			max-width:1000px;
+			max-width:1024px;
 			text-align: center;
 		}
 		.parallax{
@@ -115,7 +115,7 @@
 			background-color:black;
 			padding:12px 75px;
 			color:white;
-			display:table;
+			display:inline-block;
 			margin:0 auto 25px;
 		}
 		.fill, .slide.fill{
@@ -128,6 +128,12 @@
 			transform:translateX(-50%);
 			bottom:0;
 		}
+			@media (max-width:1024px) {
+				.container{padding:0 4%;}
+			}
+			@media (max-width:600px){
+				.black{width:100%;text-align:center;}
+			}
 
 	/* Buttons */
 		button, .button {
@@ -191,6 +197,29 @@
 			font-weight:400;
 		}
 		.navigation li:hover{border-color:white;}
+			@media (max-width:800px){
+				.navigation{padding-top:2%;}
+				.navigation ul{
+					justify-content: space-around;
+				}
+				.navigation li, .navigation li:last-child{
+					position:relative;
+					left:0;
+					top:0;
+					border:0;
+					font-weight:700;
+					margin:0;
+				}
+				.navigation li:first-child{display:none;}
+			}
+			@media (max-width:600px){
+				.navigation ul{
+					flex-wrap:wrap;
+				}
+				.navigation li, .navigation li:last-child{
+					margin: 1% 2.5%;
+				}
+			}
 
 	/* Hero */
 		.hero{
@@ -244,6 +273,9 @@
 			-webkit-box-sizing:border-box;
 					box-sizing:border-box;
 		}
+			@media (orientation:portrait){
+				.slide{background-size:cover;}
+			}
 		.slider-arrow{
 			width:80px;
 			position:absolute;
@@ -310,10 +342,10 @@
 			flex-basis:70%;
 			padding-right:5%;
 			margin-right:5%;
+			text-align:left;
 		}
 		#contact-wrapper .black{margin:0;}
 
-		#contact-form{text-align:left;}
 		#contact-form input, #contact-form textarea{
 			display:block;
 			width:80%;
@@ -332,10 +364,7 @@
 			color:white;
 			border:2px solid tomato;
 		}
-		#contact-form input{
-			min-height:30px;
-			min-width:30%;
-		}
+		#contact-form input{min-height:30px;}
 		#contact-form textarea{min-height:150px;}
 		#contact-form input::-webkit-input-placeholder, #contact-form textarea::-webkit-input-placeholder{color:black;}
 		#contact-form input:-ms-input-placeholder, #contact-form textarea:-ms-input-placeholder{color:black;}
@@ -363,6 +392,22 @@
 		}
 		.sidebar > div:last-child > .black{margin-top:50px;}
 		.sidebar p{margin: 10px auto 10px 0;}
+			@media (max-width:600px){
+				.contact .flex{
+					flex-wrap:wrap;
+				}
+				#contact-wrapper, .sidebar{
+					flex-basis:100%;
+					margin:4% auto;
+					text-align:center;
+					padding:0;
+				}
+				#contact-form input, #contact-form textarea{
+					margin:1em auto;
+					width:90%;
+				}
+				#contact-form button{margin: 1em auto;}
+			}
 
 	/* Menu */
 		.menu span{
@@ -375,6 +420,11 @@
 		}
 		.menu span:hover{border-color:black;}
 		.menu-links{margin:100px auto;}
+			@media (max-width:800px){
+				.menu .black{margin:0 auto;}
+				.menu-links{margin:10% auto;}
+				.menu span{margin:0 2.5%;}
+			}
 
 	/* News */
 		.flex.news{
@@ -423,6 +473,47 @@
 			min-width:0;
 			min-height:50vh;
 		}
+			@media (max-width:800px){
+				.news > .flex > h2{margin:10% auto;}
+				.flex.news > div{flex-basis:100%;}
+				.flex.news > .slide{display:none;}
+				.news .slider .slide{
+					padding:0;
+					text-align:center;
+				}
+			}
+
+	/* Find Us */
+		.findus{
+			text-align:center;
+			display:none;
+		}
+		.findus .black{
+			display:block;
+			margin:0 auto;
+		}
+		.findus .flex{
+			flex-wrap:wrap;
+			height:60vh;
+		}
+		.findus iframe{
+			width:100%;
+			height:100%;
+			flex-basis:70%;
+		}
+		.findus .text{
+			flex-basis:30%;
+			padding:0 5%;
+		}
+		.findus address{margin:1em auto;}
+			@media (max-width:800px){
+				.findus .flex{height:auto;}
+				.findus iframe, .findus .text{
+					flex-basis:100%;
+				}
+				.findus iframe{min-height:50vh;}
+				.findus .text{padding:5%;}
+			}
 
 	/* Back to Top */
 		.backtotop{
@@ -485,6 +576,32 @@
 		.subscribe input:-ms-input-placeholder{color:#333;font-weight:700;}
 		.subscribe input::placeholder{color:#333;font-weight:700;}
 		.subscribe p{font-size:0.9em;}
+
+			@media (max-width:800px){
+				.footer{
+					flex-wrap:wrap;
+				}
+				.footer .subscribe{
+					flex-basis:100%;
+					padding:0 10%;
+					margin-top:4%;
+					text-align:center;
+				}
+			}
+			@media (max-width:600px){
+				.footer > a, .footer > div{
+					flex-basis:100%;
+					padding:0 10%;
+					margin:2% auto;
+					text-align:center;
+				}
+				.footer .social-links{
+					padding:8% 0;
+					margin:8% 10%;
+					border-top:1px solid #ccc;
+					border-bottom:1px solid #ccc;
+				}
+			}
 
 
 /* ==========================================================================
