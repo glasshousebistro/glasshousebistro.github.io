@@ -255,6 +255,12 @@
 			transition:all var(--transition-time);
 		}
 		.hero .scroll:hover{opacity:1;}
+		/* For the Careers page */
+		.hero h1{
+			font-weight:bold;
+			letter-spacing:0.5em;
+			font-size:4vw;
+		}
 
 	/* About */
 		.about .black{margin:40px auto;}
@@ -429,7 +435,7 @@
 				#contact-form button{margin: 1em auto;}
 			}
 
-	/* Menu */
+	/* Menus */
 		.menu span{
 			font-size:1.5em;
 			text-transform: uppercase;
@@ -613,7 +619,7 @@
 		.subscribe p.success{color:limegreen;}
 		.subscribe p.error{color:tomato;}
 		.subscribe .button{
-			display:block;
+			display:none;
 			padding:5px 25px;
 			margin-top:15px;
 			text-transform: uppercase;
@@ -632,6 +638,7 @@
 					margin-top:4%;
 					text-align:center;
 				}
+				.subscribe .button{margin:15px auto 0;}
 			}
 			@media (max-width:600px){
 				.footer > a, .footer > div{
@@ -649,6 +656,28 @@
 				}
 			}
 
+	/* Careers & Vacancies */
+		.careers{background-color:#eee;}
+
+		.vacancy{
+			width:50%;
+			margin-bottom:2.5%;
+			text-align:left;
+		}
+		.vacancy h3{font-weight:700;}
+		.vacancy hr{border-width:3px;border-color:black;}
+		.vacancy:nth-child(odd){margin-left:auto;margin-right:0;}
+		.vacancy:nth-child(even){margin-left:0;margin-right:auto;}
+		.vacancies .text{
+			margin-top:5%;
+			letter-spacing:0.125em;
+		}
+			@media (max-width:800px){
+				.vacancy{
+					width:100%;
+					margin:0 auto 5%;
+				}
+			}
 
 /* ==========================================================================
    Media Queries
