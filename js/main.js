@@ -90,7 +90,7 @@ $(function() {
 		if (subject == "") {return false;}
 
 		$.ajax({
-			url: "//formspree.io/hannah@glasshousebistro.uk.com", 
+			url: "https://formspree.io/hannah@glasshousebistro.uk.com", 
 			method: "POST",
 			data: { 'name': name, 
 					'email': email,
@@ -110,7 +110,7 @@ $(function() {
 $('#newsletter-form').submit(function(e) {
 	$.ajax({
 		type: "GET",
-		url: "//facebook.us16.list-manage2.com/subscribe/post-json?u=cbbbdafdb32ee8f96c58cd3fa&id=0d7cb4e050&c=?",
+		url: "https://facebook.us16.list-manage2.com/subscribe/post-json?u=cbbbdafdb32ee8f96c58cd3fa&id=0d7cb4e050&c=?",
 		data: $(this).serialize(),
 		dataType    : 'json',
 		contentType: "application/json; charset=utf-8",
