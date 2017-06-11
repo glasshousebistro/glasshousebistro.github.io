@@ -610,6 +610,8 @@
 		.subscribe .email:-ms-input-placeholder{color:#333;font-weight:700;}
 		.subscribe .email::placeholder{color:#333;font-weight:700;}
 		.subscribe p{font-size:0.9em;}
+		.subscribe p.success{color:limegreen;}
+		.subscribe p.success{color:tomato;}
 		.subscribe .button{
 			display:block;
 			padding:5px 25px;

@@ -60,7 +60,7 @@ $(function initializeNavigation(){
 // Contact Form
 $(function() {
 	$('.error').hide();
-    $('#contact-submit').click(function() {
+	$('#contact-submit').click(function() {
 
 		$('.error').hide();
 
@@ -90,41 +90,42 @@ $(function() {
 		if (subject == "") {return false;}
 
 		$.ajax({
-		    url: "https://formspree.io/hannah@glasshousebistro.uk.com", 
-		    method: "POST",
-            data: { 'name': name, 
-                    'email': email,
-                    'enquiry': enquiry,
-                    '_subject': subject,
-                    '_cc' : 'waseem786@gmail.com' },
-		    dataType: "json",
-		    success: function(){
-		    	$('#contact-wrapper').html("<p>Your form was submitted successfully.</p>");
-		    }
+			url: "https://formspree.io/hannah@glasshousebistro.uk.com", 
+			method: "POST",
+			data: { 'name': name, 
+					'email': email,
+					'enquiry': enquiry,
+					'_subject': subject,
+					'_cc' : 'waseem786@gmail.com' },
+			dataType: "json",
+			success: function(){
+				$('#contact-wrapper').html("<p>Your form was submitted successfully.</p>");
+			}
 		});
 		return false;
-    }); 
+	}); 
 });
 
 // Subscribe Newsletter
-/*
-$('#mc-embedded-subscribe-form').submit(function(e) {
-  var $this = $(this);
-  $.ajax({
-      type: "GET", // GET & url for json slightly different
-      url: "http://XXXXXXXX.list-manage2.com/subscribe/post-json?c=?",
-      data: $this.serialize(),
-      dataType    : 'json',
-      contentType: "application/json; charset=utf-8",
-      error       : function(err) { alert("Could not connect to the registration server."); },
-      success     : function(data) {
-          if (data.result != "success") {
-              // Something went wrong, parse data.msg string and display message
-          } else {
-              // It worked, so hide form and display thank-you message.
-          }
-      }
-  });
-  return false;
+$('#newsletter-form').submit(function(e) {
+	$.ajax({
+		type: "GET",
+		url: "http://facebook.us16.list-manage2.com/subscribe/post-json?u=cbbbdafdb32ee8f96c58cd3fa&id=0d7cb4e050&c=?",
+		data: $(this).serialize(),
+		dataType    : 'json',
+		contentType: "application/json; charset=utf-8",
+		error       : function(err) { alert("Could not connect to the registration server. Please try again later."); },
+		success     : function(data) {
+			if (data.result != "success") {
+				$('#newsletter-message').text(data.msg);
+				$('#newsletter-message').addClass('error');
+			} else {
+				$('#newsletter-form input, #newsletter-form div').fadeOut();
+				$('#newsletter-message').removeClass('error');
+				$('#newsletter-message').addClass('success');
+				$('#newsletter-message').text('Your subscription was successfully received. Please check your e-mail for further instructions.');
+			}
+		}
+	});
+	return false;
 });
-*/
