@@ -134,7 +134,7 @@ $('#newsletter-form').submit(function(e) {
 $(function(){
 	var sticky = false;
 	$(window).scroll(function(){
-		if( $(window).width > 600 ){
+		if( $(window).width() > 600 ){
 			if(!sticky && ($(window).scrollTop() >= $('.flex.hero').height())){
 				$('.section .navigation').addClass('sticky');
 				sticky = true;
@@ -152,5 +152,9 @@ $(function(){
 	$('#hamburger').click(function(){
 		$(this).toggleClass('toggled');
 		$('.section .navigation').toggleClass('expand');
+	});
+	$('.scroll').click(function(){
+		if($(window).width() <= 600) $('.section .navigation').removeClass('expand');
+		$('#hamburger').removeClass('toggled');
 	});
 });
