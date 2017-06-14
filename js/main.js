@@ -129,3 +129,28 @@ $('#newsletter-form').submit(function(e) {
 	});
 	return false;
 });
+
+// Sticky Navigation & Hamburger Menu
+$(function(){
+	var sticky = false;
+	$(window).scroll(function(){
+		if( $(window).width > 600 ){
+			if(!sticky && ($(window).scrollTop() >= $('.flex.hero').height())){
+				$('.section .navigation').addClass('sticky');
+				sticky = true;
+			}
+			if(sticky && ($(window).scrollTop() < $('.flex.hero').height())){
+				$('.section .navigation').removeClass('sticky');
+				sticky = false;
+			}
+		} else {
+			$('.section .navigation').addClass('sticky');
+		}
+	});
+});
+$(function(){
+	$('#hamburger').click(function(){
+		$(this).toggleClass('toggled');
+		$('.section .navigation').toggleClass('expand');
+	});
+});
