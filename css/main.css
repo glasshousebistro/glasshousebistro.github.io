@@ -178,6 +178,7 @@
 			padding-top:35px;
 			position:relative;
 			z-index:2;
+			transition: all var(--transition-time);
 		}
 		.navigation ul{
 			list-style: none;
@@ -233,6 +234,27 @@
 					margin: 1% 2.5%;
 				}
 			}
+
+		.navigation.sticky{
+			padding-top:0;
+			position:fixed;
+			width:100%;
+			top:0;
+			left:0;
+			background-color:white;
+			box-shadow: 0 0 50px rgba(0,0,0,0.1);
+		}
+		.navigation.sticky .flex{height:50px;}
+		.navigation.sticky li{color:black;border-width:1px;}
+		.navigation.sticky li:first-child{
+			left:0;
+			width:auto;
+		}
+		.navigation.sticky li .fill{
+			max-height:50px;
+			width:auto;
+		}
+		.navigation.sticky li:hover{border-color:black;}
 
 	/* Hero */
 		.hero{
@@ -668,6 +690,13 @@
 		}
 		.vacancy h3{font-weight:700;}
 		.vacancy hr{border-width:3px;border-color:black;}
+		.vacancy strong{
+			text-transform: uppercase;
+			letter-spacing:0.2em;
+			font-size:0.8em;
+			display:block;
+			margin-top:2%;
+		}
 		.vacancy:nth-child(odd){margin-left:auto;margin-right:0;}
 		.vacancy:nth-child(even){margin-left:0;margin-right:auto;}
 		.vacancies .text{

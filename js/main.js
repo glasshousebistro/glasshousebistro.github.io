@@ -129,3 +129,18 @@ $('#newsletter-form').submit(function(e) {
 	});
 	return false;
 });
+
+// Sticky Navigation
+$(function(){
+	var sticky = false;
+	$(window).scroll(function(){
+		if(!sticky && ($(window).scrollTop() >= $('.flex.hero').height())){
+			$('.section .navigation').addClass('sticky');
+			sticky = true;
+		}
+		if(sticky && ($(window).scrollTop() < $('.flex.hero').height())){
+			$('.section .navigation').removeClass('sticky');
+			sticky = false;
+		}
+	});
+});
