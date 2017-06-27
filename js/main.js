@@ -20,7 +20,7 @@ $(function initializeSliders(){
 		var circles = $(this).find('.circles');
 		for (var i = 1; i <= total_banners; i++) {circles.append('<div class="circle"></div>');}
 		circles.find(">:first-child").addClass('active');
-	
+
 		$('.slider-icon').click(function(){
 			if( !$(this).hasClass('active') ) return;
 			var new_position, sliding_right=false, slider = $(this).closest('.slider'), track = $(slider).find('.track'), current_position = parseInt( (track.css('transform').split(',')[4] / $(slider).width()) / -1);
@@ -39,6 +39,15 @@ $(function initializeSliders(){
 				changeBanner(slider,new_position,sliding_right);
 			});
 		});
+
+		$(this).on("swipeleft",function(e){
+			this.closest('.slider-icon.left').click();
+		});
+		$(this).on("swiperight",function(e){
+			alert("swipe right!");
+			this.closest('.slider-icon.right').click();
+		});
+
 	});
 });
 
