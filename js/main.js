@@ -41,12 +41,16 @@ $(function initializeSliders(){
 		});
 
 	});
-	$('.slider').on("swipeleft",function(){
-		this.find('.slider-icon.left').click();
+
+	$('.slider').swipe({
+		swipeLeft:function(){
+			$(this).find('.slider-icon.right').click();
+		},
+		swipeRight:function(){
+			$(this).find('.slider-icon.left').click();
+		}
 	});
-	$('.slider').on("swiperight",function(){
-		this.find('.slider-icon.right').click();
-	});
+
 });
 
 function scrollTo(element){
