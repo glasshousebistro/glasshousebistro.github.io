@@ -40,14 +40,12 @@ $(function initializeSliders(){
 			});
 		});
 
-		$(this).on("swipeleft",function(e){
-			this.closest('.slider-icon.left').click();
-		});
-		$(this).on("swiperight",function(e){
-			alert("swipe right!");
-			this.closest('.slider-icon.right').click();
-		});
-
+	});
+	$('.slider').on("swipeleft",function(){
+		this.find('.slider-icon.left').click();
+	});
+	$('.slider').on("swiperight",function(){
+		this.find('.slider-icon.right').click();
 	});
 });
 
