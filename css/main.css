@@ -602,6 +602,7 @@
 			background-color:white;
 			color:black;
 			min-height:50%;
+			max-width:100vw;
 		}
 		.news .slider .track{
 			width:100%;
