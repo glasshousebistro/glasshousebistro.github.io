@@ -577,7 +577,10 @@
 				-ms-flex-align: stretch;
 					align-items: stretch;
 		}
-		.flex.news > div{-ms-flex-preferred-size:50%;flex-basis:50%;}
+		.flex.news > div{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%;}
+			@media (max-width:800px){
+				.flex.news > div{max-width:100%;}
+			}
 
 		.news > .flex{
 			-ms-flex-wrap:wrap;
