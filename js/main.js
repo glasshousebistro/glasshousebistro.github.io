@@ -177,3 +177,12 @@ $(function(){
 		if(sliderpos == 1 && $(this).hasClass('left')) $('#newsslide').addClass('happyhour');
 	});
 });
+
+// Quandoo
+$(function(){
+	$('#quandoo').click(function(e){
+		e.preventDefault();
+		window.open(this.href, 'PrenotazionetavolisuQuandoo', 'resizable=yes,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no,width=375,height=595'); 
+		return false;
+	});
+});

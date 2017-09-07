@@ -519,7 +519,7 @@
 			margin-left:0;
 			margin-bottom:15px;
 		}
-		.sidebar > div:last-child > .black{margin-top:50px;}
+		.sidebar > div:last-child > .black{margin-top:40px;}
 		.sidebar p{margin: 10px auto 10px 0;}
 			@media (max-width:600px){
 				.contact .flex{
@@ -828,6 +828,10 @@
 					margin:0 auto 5%;
 				}
 			}
+
+	/* Quandoo */
+		#quandoo{display:block;margin-top:20px;}
+		#quandoo p{margin-bottom:0;}
 
 /* ==========================================================================
    Helper classes
