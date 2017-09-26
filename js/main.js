@@ -176,6 +176,7 @@ $(function(){
 		if(sliderpos == 0 && $(this).hasClass('right')) $('#newsslide').removeClass('burger').addClass('steak');
 		if(sliderpos == 1 && $(this).hasClass('left')) $('#newsslide').addClass('burger').removeClass('steak');
 		if(sliderpos == 1 && $(this).hasClass('right')) $('#newsslide').removeClass('burger steak');
+		if(sliderpos == 2 && $(this).hasClass('left')) $('#newsslide').removeClass('burger').addClass('steak');
 	});
 });
 
