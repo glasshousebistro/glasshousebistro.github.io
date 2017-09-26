@@ -180,6 +180,7 @@ $(function(){
 		if(sliderpos == 2 && $(this).hasClass('right')) $('#newsslide').addClass('dog');
 		if(sliderpos == 3 && $(this).hasClass('left')) $('#newsslide').removeClass('dog');
 		if(sliderpos == 3 && $(this).hasClass('right')) $('#newsslide').removeClass('dog');
+		if(sliderpos == 4 && $(this).hasClass('left')) $('#newsslide').addClass('dog');
 	});
 });
 
