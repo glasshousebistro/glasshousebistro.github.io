@@ -639,8 +639,12 @@
 			background-image: url(/img/slides/slide-mini-coffee.jpg);
 			transition:all var(--transition-time);
 		}
-		#newsslide.happyhour{
-			background-image: url(/img/slides/slide-mini-happyhour.png);
+		#newsslide.burger{
+			background-image: url(/img/slides/slide-mini-burger.jpg);
+			background-size:contain;
+		}
+		#newsslide.steak{
+			background-image: url(/img/slides/slide-mini-steak.jpg);
 			background-size:contain;
 		}
 

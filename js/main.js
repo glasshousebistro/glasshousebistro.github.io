@@ -173,8 +173,9 @@ $(function(){
 $(function(){
 	$('.news .slider .slider-icon').click(function(){
 		var sliderpos = parseInt($(this).parent().siblings('.track').css('transform').split(',')[4] / $('.news .slider').width() / -1);
-		if(sliderpos == 0 && $(this).hasClass('right')) $('#newsslide').removeClass('happyhour');
-		if(sliderpos == 1 && $(this).hasClass('left')) $('#newsslide').addClass('happyhour');
+		if(sliderpos == 0 && $(this).hasClass('right')) $('#newsslide').removeClass('burger').addClass('steak');
+		if(sliderpos == 1 && $(this).hasClass('left')) $('#newsslide').addClass('burger').removeClass('steak');
+		if(sliderpos == 1 && $(this).hasClass('right')) $('#newsslide').removeClass('burger steak');
 	});
 });
 
