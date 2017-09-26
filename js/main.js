@@ -175,8 +175,11 @@ $(function(){
 		var sliderpos = parseInt($(this).parent().siblings('.track').css('transform').split(',')[4] / $('.news .slider').width() / -1);
 		if(sliderpos == 0 && $(this).hasClass('right')) $('#newsslide').removeClass('burger').addClass('steak');
 		if(sliderpos == 1 && $(this).hasClass('left')) $('#newsslide').addClass('burger').removeClass('steak');
-		if(sliderpos == 1 && $(this).hasClass('right')) $('#newsslide').removeClass('burger steak');
-		if(sliderpos == 2 && $(this).hasClass('left')) $('#newsslide').removeClass('burger').addClass('steak');
+		if(sliderpos == 1 && $(this).hasClass('right')) $('#newsslide').removeClass('steak');
+		if(sliderpos == 2 && $(this).hasClass('left')) $('#newsslide').addClass('steak');
+		if(sliderpos == 2 && $(this).hasClass('right')) $('#newsslide').addClass('dog');
+		if(sliderpos == 3 && $(this).hasClass('left')) $('#newsslide').removeClass('dog');
+		if(sliderpos == 3 && $(this).hasClass('right')) $('#newsslide').removeClass('dog');
 	});
 });
 

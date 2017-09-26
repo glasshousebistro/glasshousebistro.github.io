@@ -647,6 +647,10 @@
 			background-image: url(/img/slides/slide-mini-steak.jpg);
 			background-size:contain;
 		}
+		#newsslide.dog{
+			background-image: url(/img/slides/slide-mini-dog.jpg);
+			background-size:contain;
+		}
 
 			@media (max-width:1024px) and (orientation:portrait){
 				.flex.news > .slide{min-height:50vh;}
