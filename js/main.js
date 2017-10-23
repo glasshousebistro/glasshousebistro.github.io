@@ -169,18 +169,26 @@ $(function(){
 	});
 });
 
-// Happy Hour
+// News Slider Slides 
 $(function(){
+	var news_counter = 0;
+	var max_slides = $('.news .slider .track .slide').length;
+
+	var news_slides = [];
+	news_slides[0] = 'halloween.png';
+	news_slides[1] = 'christmas.png';
+	news_slides[2] = 'burger.jpg';
+	news_slides[3] = 'steak.jpg';
+	news_slides[4] = 'coffee.jpg';
+	news_slides[5] = 'dog.jpg';
+	news_slides[6] = 'coffee.jpg';
+	
 	$('.news .slider .slider-icon').click(function(){
-		var sliderpos = parseInt($(this).parent().siblings('.track').css('transform').split(',')[4] / $('.news .slider').width() / -1);
-		if(sliderpos == 0 && $(this).hasClass('right')) $('#newsslide').removeClass('burger').addClass('steak');
-		if(sliderpos == 1 && $(this).hasClass('left')) $('#newsslide').addClass('burger').removeClass('steak');
-		if(sliderpos == 1 && $(this).hasClass('right')) $('#newsslide').removeClass('steak');
-		if(sliderpos == 2 && $(this).hasClass('left')) $('#newsslide').addClass('steak');
-		if(sliderpos == 2 && $(this).hasClass('right')) $('#newsslide').addClass('dog');
-		if(sliderpos == 3 && $(this).hasClass('left')) $('#newsslide').removeClass('dog');
-		if(sliderpos == 3 && $(this).hasClass('right')) $('#newsslide').removeClass('dog');
-		if(sliderpos == 4 && $(this).hasClass('left')) $('#newsslide').addClass('dog');
+		$(this).hasClass('left') ? news_counter-- : news_counter++;
+		if(news_counter < 0) news_counter = 0;
+		if(news_counter >= max_slides) news_counter = max_slides - 1;
+		//var sliderpos = parseInt($(this).parent().siblings('.track').css('transform').split(',')[4] / $('.news .slider').width() / -1);
+		$('#newsslide').css('background-image','url(/img/slides/slide-mini-' + news_slides[news_counter] + ')');
 	});
 });
 
