@@ -545,7 +545,7 @@
 		.menu-links{
 			margin:10% auto;
 			display:flex;
-			flex-wrap:nowrap;
+			flex-wrap:wrap;
 			justify-content: space-around;
 			align-items: center;
 		}
@@ -553,7 +553,7 @@
 			font-size:1.5em;
 			text-transform: uppercase;
 			font-weight:700;
-			margin:2.5% auto;
+			margin: 1% 2.5%;
 			border-bottom:2px solid transparent;
 			-webkit-transition:all var(--transition-time);
 			transition:all var(--transition-time);
