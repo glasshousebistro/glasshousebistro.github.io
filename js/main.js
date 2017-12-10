@@ -175,7 +175,7 @@ $(function(){
 	var max_slides = $('.news .slider .track .slide').length;
 
 	var news_slides = [];
-	news_slides[0] = 'halloween.png';
+	news_slides[0] = 'nye.png';
 	news_slides[1] = 'christmas.png';
 	news_slides[2] = 'burger.jpg';
 	news_slides[3] = 'steak.jpg';
