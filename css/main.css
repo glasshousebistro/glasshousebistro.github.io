@@ -636,7 +636,7 @@
 		/* Happy Hour */
 		#newsslide{
 			background-color:black;
-			background-image: url(/img/slides/slide-mini-promos.jpg);
+			background-image: url(../img/slides/slide-mini-promos.jpg);
 			transition:all var(--transition-time);
 		}
 

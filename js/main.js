@@ -187,8 +187,11 @@ $(function(){
 		$(this).hasClass('left') ? news_counter-- : news_counter++;
 		if(news_counter < 0) news_counter = 0;
 		if(news_counter >= max_slides) news_counter = max_slides - 1;
-		//var sliderpos = parseInt($(this).parent().siblings('.track').css('transform').split(',')[4] / $('.news .slider').width() / -1);
 		$('#newsslide').css('background-image','url(./img/slides/slide-mini-' + news_slides[news_counter] + ')');
+	});
+	$('body').on('click', '.news .slider .circle', function(){
+		var currentcircle = $(this).index();
+		$('#newsslide').css('background-image','url(./img/slides/slide-mini-' + news_slides[currentcircle] + ')');
 	});
 });
 
