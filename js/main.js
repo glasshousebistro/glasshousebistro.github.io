@@ -177,6 +177,7 @@ $(function(){
 	var news_slides = [];
 	news_slides.push('valentines.png');
 	news_slides.push('promos.jpg');
+	news_slides.push('promos.jpg');
 	news_slides.push('burger.jpg');
 	news_slides.push('steak.jpg');
 	news_slides.push('coffee.jpg');
