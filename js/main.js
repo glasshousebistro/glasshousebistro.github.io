@@ -101,7 +101,7 @@ $(function() {
 		if (subject == "") {return false;}
 
 		$.ajax({
-			url: "https://formspree.io/waseem786@gmail.com", 
+			url: "https://formspree.io/hannah@glasshousebistro.uk.com", 
 			method: "POST",
 			data: { 'name': name, 
 					'email': email,
